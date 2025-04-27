@@ -1,0 +1,62 @@
+/* styles pour les tables  */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+/* Style de tete de la table */
+th {
+  background-color: #f2f2f2;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Style de la table des données  */
+td {
+  text-align: center;
+  padding: 10px;
+}
+
+/* Couleurs de lignes alternatives pour une meilleure lisibilité */
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Center-align the text in the first row (table title) */
+h1 {
+  text-align: center;
+}
+/* Styles pour le corps */
+body {
+font-family: Arial, sans-serif;
+}
+
+/* Styles pour le titre */
+h1 {
+color: #333;
+}
+
+/* Styles pour les bordures de tableau */
+th, td {
+border: 1px solid #999;
+}
+
+/* Styles pour les cellules d'en-tête de tableau */
+th {
+background-color: #333;
+color: #fff;
+}
+
+/* Styles pour les cellules de données de tableau */
+td {
+background-color: #eee;
+}
+
+/* Styles pour les lignes impaires */
+tr:nth-child(odd) td {
+background-color: #ddd;
+}

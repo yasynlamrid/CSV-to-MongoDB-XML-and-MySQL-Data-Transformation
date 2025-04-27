@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="nuclear_explosions">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="nuclear_explosion" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="weapon_source_country" type="xs:string"/>
+              <xs:element name="weapon_deployment_location" type="xs:string"/>
+              <xs:element name="data">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="source" type="xs:string"/>
+                    <xs:element name="magnitude">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="body" type="xs:decimal"/>
+                          <xs:element name="surface" type="xs:decimal"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="yeild">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="lower" type="xs:decimal"/>
+                          <xs:element name="upper" type="xs:decimal"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="purpose" type="xs:string"/>
+                    <xs:element name="name" type="xs:string"/>
+                    <xs:element name="type" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="location">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="coordinates">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="latitude" type="xs:decimal"/>
+                          <xs:element name="longitude" type="xs:decimal"/>
+                          <xs:element name="depth" type="xs:decimal"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="date">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="day" type="xs:integer"/>
+                    <xs:element name="month" type="xs:integer"/>
+                    <xs:element name="year" type="xs:integer"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="_id" type="xs:string"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
